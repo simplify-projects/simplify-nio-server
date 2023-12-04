@@ -17,6 +17,7 @@ public class Server {
             byte[] inputDataLength = new byte[2048];
             int length = input.read(inputDataLength);
             String inputMessage = new String(inputDataLength, 0, length);
+
             System.out.println("inputMessage from client = " + inputMessage);
 
             String outputMessage = "Response";
