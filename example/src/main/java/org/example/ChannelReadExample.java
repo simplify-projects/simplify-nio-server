@@ -22,7 +22,7 @@ public class ChannelReadExample {
             buffer.flip();
             Charset charset = Charset.defaultCharset();
             String inputData = charset.decode(buffer).toString();
-            System.out.println("inputData = " + inputData);
+            System.out.println("입력된 데이터 = " + inputData);
 
             buffer.clear();
         } catch (IOException e) {
