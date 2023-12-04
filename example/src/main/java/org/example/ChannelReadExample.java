@@ -16,6 +16,7 @@ public class ChannelReadExample {
         try (FileChannel channel = FileChannel.open(path, StandardOpenOption.READ)) {
             // 1024 바이트 크기를 가진 Buffer 생성
             ByteBuffer buffer = ByteBuffer.allocate(1024);
+            // channel은 항상 buffer를 통해 read/write 한다.
             channel.read(buffer);
 
             buffer.flip();

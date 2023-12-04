@@ -19,6 +19,7 @@ public class ChannelWriteExample {
             String data = "NIO Channel을 이용해서 파일에 데이터를 써보겠습니다.";
             Charset charset = Charset.defaultCharset();
             ByteBuffer buffer = charset.encode(data);
+            // channel은 항상 buffer를 통해 read/write 한다.
             channel.write(buffer);
         } catch (IOException e) {
             e.printStackTrace();
