@@ -10,7 +10,7 @@ import java.nio.file.StandardOpenOption;
 
 public class ChannelReadExample {
     public static void main(String[] args) {
-        Path path = Paths.get("/Users/nyong/Desktop/zipgo_dump");
+        Path path = Paths.get("/Users/nyong/Desktop/test.txt");
 
         // 채널 객체를 파일 읽기 모드로 생성
         try (FileChannel channel = FileChannel.open(path, StandardOpenOption.READ)) {

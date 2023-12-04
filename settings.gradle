@@ -1,2 +1,3 @@
 rootProject.name = 'simplify-nio-projects'
+include 'example'
 
