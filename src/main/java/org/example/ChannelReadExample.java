@@ -8,9 +8,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-public class Main {
+public class ChannelReadExample {
     public static void main(String[] args) {
-        Path path = Paths.get("/Users/nyong/Desktop/com.googlecode.iterm2.plist");
+        Path path = Paths.get("/Users/nyong/Desktop/zipgo_dump");
 
         // 채널 객체를 파일 읽기 모드로 생성
         try (FileChannel channel = FileChannel.open(path, StandardOpenOption.READ)) {
