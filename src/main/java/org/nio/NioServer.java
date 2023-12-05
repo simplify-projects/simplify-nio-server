@@ -1,5 +1,6 @@
 package org.nio;
 
+import org.nio.selector.SelectorProvider;
 import org.socket.Server;
 
 import java.io.IOException;
@@ -17,15 +18,9 @@ import java.util.logging.Logger;
 
 public class NioServer {
 
-    private static final Boolean NON_BLOCKING = false;
-
     public static void main(String[] args) {
         try {
-            Selector selector = Selector.open();
-            ServerSocketChannel serverSocketChannel = ServerSocketChannel.open();
-            serverSocketChannel.bind(new InetSocketAddress(8080));
-            serverSocketChannel.configureBlocking(NON_BLOCKING);
-            serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+            Selector selector = SelectorProvider.generate();
 
             while (true) {
                 // 이벤트 발생 대기
