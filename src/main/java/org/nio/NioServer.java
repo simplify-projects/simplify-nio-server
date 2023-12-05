@@ -20,7 +20,7 @@ public class NioServer {
 
     public static void main(String[] args) {
         try {
-            Selector selector = SelectorProvider.generate();
+            Selector selector = SelectorProvider.generate(8080);
 
             while (true) {
                 // 이벤트 발생 대기
